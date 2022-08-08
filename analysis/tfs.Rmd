@@ -1,0 +1,335 @@
+---
+title: "tfs"
+author: "MauricioCeleri"
+date: "2022-08-08"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+# Package
+```{r, message=FALSE}
+library(ExpDes)
+```
+
+# Analysis of 'Planilha 1'
+```{r, message=FALSE}
+data <- read.table("C:\\Users\\mauri\\OneDrive\\Documentos\\dados patrícia\\planilha 1.txt", h=TRUE)
+attach(data)
+head(data)
+```
+
+## Perdas
+```{r, message=FALSE}
+fat3.crd(
+  SORGO,
+  TRAT,
+  COLH,
+  Perdas,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## NIDN/NT
+```{r, message=FALSE}
+fat3.crd(
+  SORGO,
+  TRAT,
+  COLH,
+  NIDN.NT,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## NIDA/NT
+```{r, message=FALSE}
+fat3.crd(
+  SORGO,
+  TRAT,
+  COLH,
+  NIDA.NT,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## PIDN/PB
+```{r, message=FALSE}
+fat3.crd(
+  SORGO,
+  TRAT,
+  COLH,
+  PIDN.PB,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## PIDA/PB
+```{r, message=FALSE}
+fat3.crd(
+  SORGO,
+  TRAT,
+  COLH,
+  PIDA.PB,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## CSA
+```{r, message=FALSE}
+fat3.crd(
+  SORGO,
+  TRAT,
+  COLH,
+  CSA,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## NH3/NT
+```{r, message=FALSE}
+fat3.crd(
+  SORGO,
+  TRAT,
+  COLH,
+  NH3.NT,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## MS
+```{r, message=FALSE}
+fat3.crd(
+  SORGO,
+  TRAT,
+  COLH,
+  MS,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## PB
+```{r, message=FALSE}
+fat3.crd(
+  SORGO,
+  TRAT,
+  COLH,
+  PB,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+# Analysis of 'SILAGEM'
+```{r, message=FALSE}
+data <- read.table("C:\\Users\\mauri\\OneDrive\\Documentos\\dados patrícia\\silagem.txt", h=TRUE)
+head(data)
+```
+
+## Lático
+```{r, message=FALSE}
+data1 <- na.exclude(data[, 1:4])
+attach(data1)
+fat3.crd(
+  Sorgo,
+  Trat,
+  Colh,
+  Latico,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## Acetico
+```{r, message=FALSE}
+attach(data)
+
+fat3.crd(
+  Sorgo,
+  Trat,
+  Colh,
+  Acetico,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## Propionico
+```{r, message=FALSE}
+fat3.crd(
+  Sorgo,
+  Trat,
+  Colh,
+  Propionico,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## Butirico
+```{r, message=FALSE}
+fat3.crd(
+  Sorgo,
+  Trat,
+  Colh,
+  Butirico,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+# Analysis of 'ESTABILIDADE'
+```{r, message=FALSE}
+data <- read.table("C:\\Users\\mauri\\OneDrive\\Documentos\\dados patrícia\\estabilidade.txt", h=TRUE)
+head(data)
+```
+
+## Lático
+```{r, message=FALSE}
+data1 <- na.exclude(data[, 1:4])
+attach(data1)
+fat3.crd(
+  Sorgo,
+  Trat,
+  Colh,
+  Latico,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## Acetico
+```{r, message=FALSE}
+attach(data)
+
+fat3.crd(
+  Sorgo,
+  Trat,
+  Colh,
+  Acetico,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## Propionico
+```{r, message=FALSE}
+fat3.crd(
+  Sorgo,
+  Trat,
+  Colh,
+  Propionico,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+## Butarico
+```{r, message=FALSE}
+fat3.crd(
+  Sorgo,
+  Trat,
+  Colh,
+  Butarico,
+  quali = c(TRUE, TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SOR", "INOC", "COLH"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+
+# Analysis of 'N-NH3'
+```{r, message=FALSE}
+data <- read.table("C:\\Users\\mauri\\OneDrive\\Documentos\\dados patrícia\\N-NH3.txt", h=TRUE)
+attach(data)
+head(data)
+```
+
+## N-NH3
+```{r, message=FALSE}
+fat2.crd(
+  sorgo,
+  inoc,
+  N.NH3,
+  quali = c(TRUE, TRUE),
+  mcomp = "tukey",
+  fac.names = c("SORG", "INOC"),
+  sigT = 0.05,
+  sigF = 0.05,
+  unfold = NULL
+)
+```
+

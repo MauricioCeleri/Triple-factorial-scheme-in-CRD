@@ -5,10 +5,9 @@ navbar:
   left:
   - text: Home
     href: index.html
-  - text: About
-    href: about.html
-  - text: License
-    href: license.html
+  - text: Triple factorial scheme in CRD
+    href: tfs.html
+    
 output:
   workflowr::wflow_html:
     toc: yes

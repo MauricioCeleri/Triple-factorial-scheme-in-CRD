@@ -8,4 +8,4 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+Analysis of an experiment in Completely Randomized Design in triple factorial scheme
