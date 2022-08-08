@@ -361,7 +361,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -372,8 +372,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -386,9 +386,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong>
@@ -412,21 +412,18 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown is untracked by Git. To know which version of the R
-Markdown file created these results, you’ll want to first commit it to
-the Git repo. If you’re still working on the analysis, you can ignore
-this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
@@ -517,15 +514,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMauricioCeleriTriplefactorialschemeinCRDtreeb3530f7d06b66cd0d12c5f4133a837860b283d09targetblankb3530f7a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomMauricioCeleriTriplefactorialschemeinCRDtreee93bb8d26a9c656f475f875a6bf18635919f1246targetblanke93bb8da">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/MauricioCeleri/Triple-factorial-scheme-in-CRD/tree/b3530f7d06b66cd0d12c5f4133a837860b283d09" target="_blank">b3530f7</a>
+<a href="https://github.com/MauricioCeleri/Triple-factorial-scheme-in-CRD/tree/e93bb8d26a9c656f475f875a6bf18635919f1246" target="_blank">e93bb8d</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomMauricioCeleriTriplefactorialschemeinCRDtreeb3530f7d06b66cd0d12c5f4133a837860b283d09targetblankb3530f7a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomMauricioCeleriTriplefactorialschemeinCRDtreee93bb8d26a9c656f475f875a6bf18635919f1246targetblanke93bb8da"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -535,7 +532,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/MauricioCeleri/Triple-factorial-scheme-in-CRD/tree/b3530f7d06b66cd0d12c5f4133a837860b283d09" target="_blank">b3530f7</a>.
+<a href="https://github.com/MauricioCeleri/Triple-factorial-scheme-in-CRD/tree/e93bb8d26a9c656f475f875a6bf18635919f1246" target="_blank">e93bb8d</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -553,17 +550,6 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
-Untracked files:
-    Untracked:  analysis/tfs.Rmd
-
-Unstaged changes:
-    Modified:   analysis/_site.yml
-    Deleted:    analysis/about.Rmd
-    Deleted:    analysis/license.Rmd
-
-Staged changes:
-    Modified:   analysis/index.Rmd
-
 </code></pre>
 <p>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not
@@ -577,10 +563,73 @@ have uncommitted changes.
 <hr>
 </div>
 <div id="versions" class="tab-pane fade">
+
 <p>
-There are no past versions. Publish this analysis with
-<code>wflow_publish()</code> to start tracking its development.
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>analysis/tfs.Rmd</code>) and HTML
+(<code>docs/tfs.html</code>) files. If you’ve configured a remote Git
+repository (see <code>?wflow_git_remote</code>), click on the hyperlinks
+in the table below to view the files as they were in that past version.
 </p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/MauricioCeleri/Triple-factorial-scheme-in-CRD/blob/e93bb8d26a9c656f475f875a6bf18635919f1246/analysis/tfs.Rmd" target="_blank">e93bb8d</a>
+</td>
+<td>
+MauricioCeleri
+</td>
+<td>
+2022-08-08
+</td>
+<td>
+wflow_publish(file = "*")
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/MauricioCeleri/Triple-factorial-scheme-in-CRD/e93bb8d26a9c656f475f875a6bf18635919f1246/docs/tfs.html" target="_blank">e93bb8d</a>
+</td>
+<td>
+MauricioCeleri
+</td>
+<td>
+2022-08-08
+</td>
+<td>
+wflow_publish(file = "*")
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
 </div>
 </div>
@@ -2735,19 +2784,21 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] ExpDes_1.2.2
+[1] ExpDes_1.2.2    workflowr_1.7.0
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.8.3     rstudioapi_0.13  knitr_1.39       magrittr_2.0.3  
- [5] workflowr_1.7.0  R6_2.5.1         rlang_1.0.3      fastmap_1.1.0   
- [9] fansi_1.0.3      stringr_1.4.0    tools_4.2.0      xfun_0.31       
-[13] utf8_1.2.2       cli_3.3.0        stargazer_5.2.3  git2r_0.30.1    
-[17] jquerylib_0.1.4  htmltools_0.5.2  ellipsis_0.3.2   rprojroot_2.0.3 
-[21] yaml_2.3.5       digest_0.6.29    tibble_3.1.7     lifecycle_1.0.1 
-[25] crayon_1.5.1     later_1.3.0      sass_0.4.1       vctrs_0.4.1     
-[29] promises_1.2.0.1 fs_1.5.2         glue_1.6.2       evaluate_0.15   
-[33] rmarkdown_2.14   stringi_1.7.6    bslib_0.3.1      compiler_4.2.0  
-[37] pillar_1.7.0     jsonlite_1.8.0   httpuv_1.6.5     pkgconfig_2.0.3 </code></pre>
+ [1] Rcpp_1.0.8.3     bslib_0.3.1      compiler_4.2.0   pillar_1.7.0    
+ [5] later_1.3.0      git2r_0.30.1     jquerylib_0.1.4  tools_4.2.0     
+ [9] getPass_0.2-2    digest_0.6.29    jsonlite_1.8.0   evaluate_0.15   
+[13] tibble_3.1.7     lifecycle_1.0.1  pkgconfig_2.0.3  rlang_1.0.3     
+[17] cli_3.3.0        rstudioapi_0.13  yaml_2.3.5       xfun_0.31       
+[21] fastmap_1.1.0    stargazer_5.2.3  httr_1.4.3       stringr_1.4.0   
+[25] knitr_1.39       sass_0.4.1       fs_1.5.2         vctrs_0.4.1     
+[29] rprojroot_2.0.3  glue_1.6.2       R6_2.5.1         processx_3.6.1  
+[33] fansi_1.0.3      rmarkdown_2.14   callr_3.7.0      magrittr_2.0.3  
+[37] whisker_0.4      ps_1.7.1         promises_1.2.0.1 htmltools_0.5.2 
+[41] ellipsis_0.3.2   httpuv_1.6.5     utf8_1.2.2       stringi_1.7.6   
+[45] crayon_1.5.1    </code></pre>
 </div>
 </div>
 </div>
